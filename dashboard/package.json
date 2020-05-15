@@ -1,0 +1,40 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "fix": "vue-cli-service lint --fix",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
+    "chart.js": "^2.7.2",
+    "chartjs-plugin-datalabels": "^0.4.0",
+    "dateformat": "^3.0.3",
+    "deepmerge": "^2.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "vue": "^2.5.16",
+    "vue-chartjs": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.10",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.10",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-rc.10",
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "@vue/eslint-config-standard": "^3.0.0-rc.10",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "lint-staged": "^7.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "tailwindcss": "^0.6.4",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
