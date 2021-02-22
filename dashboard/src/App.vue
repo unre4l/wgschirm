@@ -7,12 +7,10 @@
     <OpenHours />
     <News />
     <Observer />
-    <Example />
   </div>
 </template>
 
 <script>
-import axios from 'axios';
 import Observer from './components/Observer.vue';
 import Time from './components/Time.vue';
 import Weather from './components/Weather.vue';
@@ -20,7 +18,6 @@ import Crypto from './components/Crypto.vue';
 import Hvv from './components/Hvv.vue';
 import News from './components/News.vue';
 import OpenHours from './components/OpenHours.vue';
-import Example from './components/Example.vue';
 
 const RELOAD_TIMEOUT = 10000;
 
@@ -34,7 +31,6 @@ export default {
     Hvv,
     News,
     OpenHours,
-    Example,
   },
   data() {
     return {
@@ -64,6 +60,12 @@ export default {
 =wall-only
   @media only screen and (min-width: 1080px) and (max-width: 1200px)
     @content
+
+.no-flex
+  flex: none
+
+html
+  overflow: hidden
 
 body
   background: #f4f4f4

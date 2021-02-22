@@ -1,5 +1,5 @@
 <template>
-  <div class="chart">
+  <div class="chart no-flex">
     <div class="chart-container">
       <div v-if="errorMsg !== null" class="errorMsg">
         <span class="errorText">{{ errorMsg }}</span>
@@ -29,6 +29,21 @@ export default {
       mixins: [mixins.reactiveProp],
       props: ['options'],
       mounted() {
+        this.addPlugin({
+          id: 'chart-plugin',
+          afterDraw(chart) {
+            const c = chart.canvas;
+            const ctx = c.getContext('2d');
+
+            ctx.strokeStyle = 'magenta';
+            ctx.beginPath();
+            const posX = 8;
+            ctx.moveTo(posX, 0);
+            ctx.lineTo(posX, 500);
+            ctx.stroke();
+          },
+        });
+
         this.renderChart(this.chartData, this.options);
       },
     },
@@ -63,7 +78,7 @@ export default {
           time: {
             unit: 'hour',
             displayFormats: {
-              hour: 'H:00',
+              hour: 'H:MM',
             },
             stepSize: 2,
             minUnit: 'hour',

@@ -1,21 +1,22 @@
 
 <template>
   <div class="news ">
-    <div v-for="(row, i) in rows" :key="i" class="col">
-      <div v-if="i === 2">
-        <Putzplan />
-      </div>
-      <div v-for="news in row" :key="news.guid" class="news-item">
-        <div :class="getColor(news.guid)" class="news-body">
-          <div class="news-date">
-            <div class="readableTime">{{ timeAgo(news.guid) }}</div>
+    <div>
+      <div v-for="(row, i) in rows" :key="i" class="col">
+        <div v-if="i === 2">
+          <Putzplan />
+        </div>
+        <div v-for="news in row" :key="news.guid" class="news-item">
+          <div :class="getColor(news.guid)" class="news-body">
+            <div class="news-date">
+              <div class="readableTime">{{ timeAgo(news.guid) }}</div>
+            </div>
+            <h3>{{ news.title }}</h3>
+            <p>{{ news.content }}</p>
           </div>
-          <h3>{{ news.title }}</h3>
-          <p>{{ news.content }}</p>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -133,7 +134,21 @@ export default {
     padding: 10px
     width: 100%
     display: flex
-    flex-grow: 1
+    flex: 1 1 auto
+    overflow: hidden
+
+    &::after
+      content: ''
+      display: block
+      width: 100%
+      height: 250px
+      background: linear-gradient(transparent 0%, white 80%);
+      position: absolute
+      bottom: 0
+      left: 0
+
+    > div
+      dislpay: flex
 
     h3
       font-size: 1.1rem

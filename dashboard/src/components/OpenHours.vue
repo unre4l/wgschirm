@@ -1,6 +1,6 @@
 
 <template>
-  <div class="openhours">
+  <div class="openhours no-flex">
     <div v-for="item in openhours" :key="item.name">
       <p class="heading">{{ item.name }}</p>
       <p v-if="item.isOpen">💤</p>

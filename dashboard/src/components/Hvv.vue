@@ -1,6 +1,6 @@
 
 <template>
-  <div class="hvv">
+  <div class="hvv no-flex">
     <div class="hvv-timeline">
       <div is="transition-group" name="bahnen">
         <div

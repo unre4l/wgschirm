@@ -1,6 +1,6 @@
 
 <template>
-  <div class="putzplan">
+  <div class="putzplan no-flex">
     <h4>Putzplan ({{ seed }}@{{ mutation }})</h4>
     <table>
       <thead>

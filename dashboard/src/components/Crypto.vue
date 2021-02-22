@@ -1,6 +1,6 @@
 
 <template>
-  <div class="coins">
+  <div class="coins no-flex">
     <div v-for="(value, key, index) in data" :key="index">
       <p class="heading">{{ key }}</p>
       <p>{{ value }}</p>

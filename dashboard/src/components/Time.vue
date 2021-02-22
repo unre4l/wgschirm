@@ -1,6 +1,6 @@
 
 <template>
-  <div class="time">
+  <div class="time no-flex">
     <div>{{ date }}</div>
     <div class="current-time">{{ time }}</div>
     <div><span class="time-label">week no.</span> {{ weekno }}</div>

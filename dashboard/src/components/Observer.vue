@@ -1,9 +1,9 @@
 
 
 <template>
-  <div class="observer">
+  <div class="observer no-flex">
     <div v-for="(value, key, i) in observed" :key="i">
-      <p class="heading">{{ prettyKey(key) }}
+      <p>{{ prettyKey(key) }}
         <template v-if="typeof value === 'object'">
           <span v-for="(item, j) in value" :key="j">
             <span v-if="j === 0">{{ item }} </span>
@@ -68,7 +68,7 @@ export default {
     > *
       flex-grow: 1
       text-align: center
-      font-size: 1.75rem
+      font-size: 10px
       line-height: 1.125
       width: 50%
 
