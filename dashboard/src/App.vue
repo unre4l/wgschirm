@@ -65,7 +65,8 @@ export default {
   flex: none
 
 html
-  overflow: hidden
+  +wall-only
+    overflow: hidden
 
 body
   background: #f4f4f4
