@@ -19,24 +19,24 @@ export default {
       this.url = null;
     };
 
-    setTimeout(() => {
-      this.url = 'https://download.media.tagesschau.de/video/2021/0223/TV-20210223-2035-4900.webl.h264.mp4';
-      this.$nextTick(() => {
-        const x = this.$refs.video.play();
+    // setTimeout(() => {
+    //   this.url = 'https://download.media.tagesschau.de/video/2021/0223/TV-20210223-2035-4900.webl.h264.mp4';
+    //   this.$nextTick(() => {
+    //     const x = this.$refs.video.play();
 
 
-        if (x !== undefined) {
-          x.then(() => {
-            // Automatic playback started!
-            console.log('playy');
-          }).catch((error) => {
-            // Automatic playback failed.
-            // Show a UI element to let the user manually start playback.
-            console.log(error);
-          });
-        }
-      });
-    }, 500);
+    //     if (x !== undefined) {
+    //       x.then(() => {
+    //         // Automatic playback started!
+    //         console.log('playy');
+    //       }).catch((error) => {
+    //         // Automatic playback failed.
+    //         // Show a UI element to let the user manually start playback.
+    //         console.log(error);
+    //       });
+    //     }
+    //   });
+    // }, 500);
   },
 };
 </script>
