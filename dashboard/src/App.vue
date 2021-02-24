@@ -7,6 +7,7 @@
     <OpenHours />
     <News />
     <Observer />
+    <Tagesschau />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Crypto from './components/Crypto.vue';
 import Hvv from './components/Hvv.vue';
 import News from './components/News.vue';
 import OpenHours from './components/OpenHours.vue';
+import Tagesschau from './components/Tagesschau.vue';
 
 const RELOAD_TIMEOUT = 10000;
 
@@ -31,6 +33,7 @@ export default {
     Hvv,
     News,
     OpenHours,
+    Tagesschau,
   },
   data() {
     return {
